@@ -17,5 +17,5 @@ class Tablero{
         void imprimirBombas(int);
         void marcarCasilla(int, int);
         bool destaparCasilla(int, int);
-        int calcularBombas(int, int);
+        int calcularBombas();
 };

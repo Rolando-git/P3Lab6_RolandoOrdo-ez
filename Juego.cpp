@@ -12,6 +12,9 @@ void Juego::Jugar(){
     Casilla** matriz = tablero_del_juego->getMatriz();
     bool finJuego = false;
     int size = tablero_del_juego->getSize();
+    int bombas = tablero_del_juego->calcularBombas();//cantidad de bombas en el tablero
+    int casillas = (size*size) - bombas;
+    int s = 0;
     tablero_del_juego->imprimirBombas(size);
     while(finJuego == false){
         char x;
@@ -32,10 +35,14 @@ void Juego::Jugar(){
                 if(finJuego == true){
                     cout << "se acabo el juego" << endl;
                 }else{
-                    
+                    s++;
                 }
             break;
             default: cout << "Error" << endl;
+        }
+        if(s == casillas){
+            finJuego = true;
+            cout << "haz destapado todas las casillas sin bombas" << endl;
         }
     }
 }

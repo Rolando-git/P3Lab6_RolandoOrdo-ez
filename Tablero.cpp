@@ -122,6 +122,18 @@ bool Tablero::destaparCasilla(int x, int y){
     return temp;
 }
 
-int Tablero::calcularBombas(int x, int y){
-    
+int Tablero::calcularBombas(){
+    /*ya se que este era para calcular la bombas al rededor
+    pero no se me ocurio ninguna forma de hacerlo, asi que use el
+    metodo para contar cuantas bombas hay en la matriz y asi saber si todas estan
+    todas las casillas destapadas menos la de bombas*/
+    int bombas = 0;
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            if(matriz[i][j].get_esBomba() == true){
+                bombas++;
+            }
+        }
+    }
+    return bombas;
 }
