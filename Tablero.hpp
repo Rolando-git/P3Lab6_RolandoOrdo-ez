@@ -1,5 +1,5 @@
 #pragma once
-#include<iostream>
+#include <iostream>
 #include <time.h>
 #include <stdlib.h>
 #include "Casilla.hpp"
@@ -15,4 +15,7 @@ class Tablero{
         ~Tablero();
         int getSize();
         void imprimirBombas(int);
+        void marcarCasilla(int, int);
+        bool destaparCasilla(int, int);
+        int calcularBombas(int, int);
 };

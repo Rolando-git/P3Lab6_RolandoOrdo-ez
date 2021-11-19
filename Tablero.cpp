@@ -110,3 +110,18 @@ void Tablero::imprimirBombas(int size){
         cout << "\n";
     }
 }
+
+void Tablero::marcarCasilla(int x, int y){
+    matriz[x][y].set_marcada(true);
+    matriz[x][y].set_display('x');
+}
+
+bool Tablero::destaparCasilla(int x, int y){
+    bool temp = matriz[x][y].get_esBomba();
+    matriz[x][y].set_descubierta(true);
+    return temp;
+}
+
+int Tablero::calcularBombas(int x, int y){
+    
+}
