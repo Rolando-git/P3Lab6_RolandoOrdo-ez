@@ -17,6 +17,7 @@ Tablero::Tablero(int dificultad){
         int bombas = 12;
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
+                matriz[i][j].set_esBomba(false);
                 if(bombas != 0){
                     int random_1 = rand() % 2 + 0;
                     int random_2 = rand() % 2 + 0;
@@ -39,6 +40,7 @@ Tablero::Tablero(int dificultad){
         int bombas = 25;
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
+                matriz[i][j].set_esBomba(false);
                 if(bombas != 0){
                     int random_1 = rand() % 2 + 0;
                     int random_2 = rand() % 2 + 0;
@@ -61,6 +63,7 @@ Tablero::Tablero(int dificultad){
         int bombas = 43;
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
+                matriz[i][j].set_esBomba(false);
                 if(bombas != 0){
                     int random_1 = rand() % 2 + 0;
                     int random_2 = rand() % 2 + 0;
@@ -80,4 +83,17 @@ Casilla** Tablero::getMatriz(){
 
 Tablero::~Tablero(){
     delete[] matriz;
+}
+
+void Tablero::imprimirBombas(int size){
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            if(matriz[i][j].get_esBomba() == true){
+                cout << "[ " << "#" << " ]";
+            }else{
+                cout << "[  ]";
+            }
+        }
+        cout << "\n";
+    }
 }

@@ -45,6 +45,7 @@ void op1(){
         {
             Tablero* t = new Tablero(dificultad);
             Juego* j = new Juego(t);
+            j->Jugar();
             delete t;
             delete j;
         }
