@@ -7,6 +7,6 @@ using std::string;
 using std::vector;
 
 int main(){
-
+    cout << "Hola" << endl;
     return 0;
 }
