@@ -7,10 +7,12 @@ using std::cout;
 
 class Tablero{
     Casilla** matriz;
+    int size;
     public:
         Tablero();
         Tablero(int);
         Casilla** getMatriz();
         ~Tablero();
+        int getSize();
         void imprimirBombas(int);
 };

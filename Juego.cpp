@@ -11,5 +11,6 @@ Juego::Juego(Tablero* tablero_Bombas){
 void Juego::Jugar(){
     Casilla** matriz = tablero_del_juego->getMatriz();
     bool finJuego = false;
-    tablero_del_juego->imprimirBombas(8);
+    int size = tablero_del_juego->getSize();
+    tablero_del_juego->imprimirBombas(size);
 }
