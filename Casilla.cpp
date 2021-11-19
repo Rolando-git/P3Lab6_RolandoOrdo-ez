@@ -30,3 +30,15 @@ bool Casilla::get_descubierta(){
 void Casilla::set_marcada(bool x){
     this->marcada = x;
 }
+
+bool Casilla::get_marcada(){
+    return this->marcada;
+}
+
+void Casilla::set_display(char x){
+    this->display = x;
+}
+
+char Casilla::get_display(){
+    return this->display;
+}

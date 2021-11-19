@@ -44,16 +44,25 @@ void op1(){
         case 1:
         {
             Tablero* t = new Tablero(dificultad);
+            Juego* j = new Juego(t);
+            delete t;
+            delete j;
         }
         break;
         case 2:
         {
             Tablero* t = new Tablero(dificultad);
+            Juego* j = new Juego(t);
+            delete t;
+            delete j;
         }
         break;
         case 3:
         {
             Tablero* t = new Tablero(dificultad);
+            Juego* j = new Juego(t);
+            delete t;
+            delete j;
         }
         break;
         default: cout << "Error" << endl;
