@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Casilla.hpp"
+#include "Tablero.hpp"
+#include "Juego.hpp"
 using std::cin;
 using std::cout;
 using std::endl;
@@ -32,5 +34,28 @@ int menu(){
 }
 
 void op1(){
-
+    int dificultad = 0;
+    cout << "Seleccione dificultad" << endl;
+    cout << "1.Facil" << endl;
+    cout << "2.Medio" << endl;
+    cout << "3.Dificil" << endl;
+    cin >> dificultad;
+    switch(dificultad){
+        case 1:
+        {
+            Tablero* t = new Tablero(dificultad);
+        }
+        break;
+        case 2:
+        {
+            Tablero* t = new Tablero(dificultad);
+        }
+        break;
+        case 3:
+        {
+            Tablero* t = new Tablero(dificultad);
+        }
+        break;
+        default: cout << "Error" << endl;
+    }
 }
